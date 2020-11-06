@@ -26,6 +26,9 @@ function setup() {
 	background(...backgroundColor);
 }
 
-function draw() {}
+function draw() {
+	console.log("test");
+}
 
 //AAHC ❤
+//homoer 
