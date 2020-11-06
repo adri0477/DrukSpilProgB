@@ -26,6 +26,8 @@ function setup() {
 	background(...backgroundColor);
 }
 
-function draw() {}
+function draw() {
+	console.log('Hej fra mig');
+}
 
 //AAHC ❤
