@@ -28,6 +28,9 @@ function setup() {
 
 function draw() {
 	console.log("Du er en lille bøøøøøgseungeeee");
-
+	console.log('Hej fra mig');
+	console.log('test');
 }
+
 //AAHC ❤
+//homoer
