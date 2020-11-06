@@ -27,5 +27,5 @@ function setup() {
 }
 
 function draw() {}
-
+	console.log("Du er en lille bøøøøøgseungeeee");
 //AAHC ❤
