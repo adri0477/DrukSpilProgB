@@ -28,6 +28,8 @@ function setup() {
 
 function draw() {
 	console.log('Hej fra mig');
+	console.log('test');
 }
 
 //AAHC ❤
+//homoer
