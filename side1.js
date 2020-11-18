@@ -5,8 +5,6 @@ function selInit() {
 
 	sel.position(10, 10);
 	sel.option('Home');
-	sel.option('YouTube');
-	sel.option('Docs');
 	sel.option('Drukspil #1');
 	sel.option('Drukspil #2');
 	sel.option('Drukspil #3');

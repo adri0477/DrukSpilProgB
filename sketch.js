@@ -34,19 +34,25 @@ function setup() {
 	//Set background color
 	background(...backgroundColor);
 
-	spil1Knap = new customButton(1000, 1000);
-
 	selInit();
+	knap1 = new customButton(100, 100, 100, 'Over under');
 
 	console.log('Load succeeded');
 }
 
 function draw() {
 	background(...backgroundColor);
-	spil1Knap.display();
+
 	if (screen === 0) {
 		image(img1, 150, 150);
 		image(img2, 850, 150);
+	}
+	knap1.display();
+}
+
+function mouseClicked() {
+	if (knap1.checkPress()) {
+		alert('PRESSED');
 	}
 }
 
