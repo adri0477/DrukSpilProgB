@@ -8,7 +8,7 @@ let h = 500;
 const fR = 60;
 
 //Background color of the main view
-const backgroundColor = [0];
+const backgroundColor = [255];
 
 function preload() {
 	w = windowWidth - 5;
@@ -16,7 +16,6 @@ function preload() {
 }
 
 function setup() {
-	console.log('Load DrukSpil.mattidk.homo.sut.den.exe.jar.jav.js.p5.word.sketch.js succeeded');
 	//Create main canvas which the user sees
 	createCanvas(w, h);
 
@@ -25,9 +24,15 @@ function setup() {
 
 	//Set background color
 	background(...backgroundColor);
+
+	spil1Knap = new customButton(250, 250);
+
+	console.log('Load succeeded');
 }
 
-function draw() {}
+function draw() {
+	spil1Knap.display();
+}
 
 //AAHC ❤
 //homoer
