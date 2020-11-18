@@ -1,6 +1,10 @@
 // <reference path="./p5.global-mode.d.ts" />
 // Ignore the line above. It is for vscode p5 integration.
 
+let sel;
+
+let screen = 0;
+
 let w = 500;
 let h = 500;
 
@@ -8,9 +12,14 @@ let h = 500;
 const fR = 60;
 
 //Background color of the main view
-const backgroundColor = [255];
+const backgroundColor = [211, 211, 211];
 
+//
+let img;
 function preload() {
+	img1 = loadImage('./billeder/toast.png');
+	img2 = loadImage('./billeder/toast.png');
+
 	w = windowWidth - 5;
 	h = windowHeight - 5;
 }
@@ -25,13 +34,20 @@ function setup() {
 	//Set background color
 	background(...backgroundColor);
 
-	spil1Knap = new customButton(250, 250);
+	spil1Knap = new customButton(1000, 1000);
+
+	selInit();
 
 	console.log('Load succeeded');
 }
 
 function draw() {
+	background(...backgroundColor);
 	spil1Knap.display();
+	if (screen === 0) {
+		image(img1, 150, 150);
+		image(img2, 850, 150);
+	}
 }
 
 //AAHC ❤
