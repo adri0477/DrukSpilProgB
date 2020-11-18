@@ -16,6 +16,7 @@ function preload() {
 }
 
 function setup() {
+	console.log('Load DrukSpil.mattidk.homo.sut.den.exe.jar.jav.js.p5.word.sketch.js succeeded');
 	//Create main canvas which the user sees
 	createCanvas(w, h);
 
@@ -26,11 +27,7 @@ function setup() {
 	background(...backgroundColor);
 }
 
-function draw() {
-	console.log('Du er en lille bøøøøøgseungeeee');
-	console.log('Hej fra mig');
-	console.log('test');
-}
+function draw() {}
 
 //AAHC ❤
 //homoer
