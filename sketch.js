@@ -25,13 +25,19 @@ function setup() {
 	//Set background color
 	background(...backgroundColor);
 
-	spil1Knap = new customButton(250, 250);
+	knap1 = new customButton(100, 100, 100, 'Over under');
 
 	console.log('Load succeeded');
 }
 
 function draw() {
-	spil1Knap.display();
+	knap1.display();
+}
+
+function mouseClicked() {
+	if (knap1.checkPress()) {
+		alert('PRESSED');
+	}
 }
 
 //AAHC ❤
