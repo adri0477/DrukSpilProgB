@@ -1,3 +1,6 @@
+//Set global var for the selectBox
+let sel;
+
 function selInit() {
 	//textAlign(CENTER);
 	sel = createSelect();
