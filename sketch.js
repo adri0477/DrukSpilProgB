@@ -15,7 +15,7 @@ const fR = 60;
 const backgroundColor = [211, 211, 211];
 
 //
-let img;
+let img, img1, img2;
 function preload() {
 	img1 = loadImage('./billeder/toast.png');
 	img2 = loadImage('./billeder/toast.png');

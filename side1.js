@@ -1,5 +1,5 @@
 function selInit() {
-	textAlign(CENTER);
+	//textAlign(CENTER);
 	sel = createSelect();
 	sel.size(90, 40);
 
