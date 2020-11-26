@@ -20,7 +20,7 @@ let img, img1, img2;
 //Preload runs before setup and should only contain images fonts, and files to be loaded.
 function preload() {
 	//Set img1 and img2 to their respective images
-	img1 = loadImage('./billeder/toast.png');
+	img1 = loadImage('./billeder/juletræ.png');
 	img2 = loadImage('./billeder/toast.png');
 }
 
