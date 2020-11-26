@@ -53,7 +53,7 @@ function onStarted(ivme) {
  */
 function whosGonnaWin(ivme, speed, pies, angle) {
 	x = ivme;
-	console.log('ivme', x);
+	console.log('Vinder', x);
 	var sum = 0;
 	do {
 		x -= speed;
@@ -66,7 +66,7 @@ function whosGonnaWin(ivme, speed, pies, angle) {
 		//newAngle = newAngle % 360;
 		aralik = [newAngle, newAngle + angle];
 		if (aralik[0] % 360 <= 270 && aralik[1] % 360 >= 270) {
-			console.log('kazanacak', pie.orderPerm, aralik, x, order);
+			console.log('xT0ASTED', pie.orderPerm, aralik, x, order);
 			return pie;
 		}
 	});
@@ -80,7 +80,7 @@ function spin() {
 	if (ivme > 0) {
 		return {
 			status: 'error',
-			message: 'Zaten Dönüyor.',
+			message: 'fejl',
 		};
 	}
 	ivme = (random(4) + 1) / 10;
@@ -94,7 +94,7 @@ function doubleClicked() {
 }
 
 function setupWheel() {
-	createCanvas(720, 600);
+	createCanvas(displayWidth, displayHeight);
 	/**
 	 * To rotate things by using degrees.
 	 */
@@ -111,7 +111,7 @@ function setupWheel() {
 		 * We create our pies
 		 */
 
-		pies.push(new Pie(i, 'Drik ' + i + ' slurke', 192, 192, 192));
+		pies.push(new Pie(i, 'Drik ' + i + ' slurke', 0, 135, 62));
 	}
 }
 //let f = [red, green, 31231];
@@ -138,7 +138,7 @@ function drawWheel() {
 		pies[i].write();
 	}
 
-	fill(255);
+	fill(214, 0, 28);
 	// Center circle
 	ellipse(0, 0, 120, 120);
 	// The stick.
