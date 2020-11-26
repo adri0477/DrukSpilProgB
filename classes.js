@@ -16,7 +16,7 @@ class customButton {
 
 		//Set textAlign to center, center and display the text for the button
 		textAlign(CENTER, CENTER);
-		text(this.text, this.x + this.x / 2, this.y + this.y / 2);
+		text(this.text, this.x + this.w / 2, this.y + this.h / 2);
 
 		//Set textAlign to default
 		textAlign(LEFT, BASELINE);

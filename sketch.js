@@ -44,6 +44,7 @@ function setup() {
 
 	//Create a new button called knap1 from the customButton class in classes.js
 	knap1 = new customButton(100, 100, 100, 'Over under');
+	udfordring = new customButton(200, 200, 100, 'ud');
 
 	//Log that setup is now done
 	console.log('Load succeeded');
@@ -75,7 +76,9 @@ function mouseClicked() {
 	//If knap1.checkPress returns true then run code
 	if (knap1.checkPress()) {
 		//CODE
-		alert('PRESSED');
+		alert('HOHO glædelig jul');
+	}
+	if (udfordring.checkPress()) {
 	}
 }
 
