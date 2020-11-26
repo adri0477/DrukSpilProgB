@@ -54,9 +54,16 @@ function draw() {
 	background(...backgroundColor);
 
 	//If the screen is 0 then display two images
-	if (screen === 0) {
-		image(img1, 150, 150);
-		image(img2, 850, 150);
+	switch (screen) {
+		case 0:
+			image(img1, 150, 150);
+			image(img2, 850, 150);
+			break;
+		case 1:
+			displayScreen1();
+			break;
+		default:
+			break;
 	}
 
 	//Display knap1 with its own method
