@@ -1,1 +1,3 @@
-function displayScreen1() {}
+function displayScreen1() {
+	udfordring.display();
+}
