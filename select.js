@@ -21,6 +21,9 @@ function mySelectEvent() {
 	console.log(item);
 	if (item === 'Drukspil #1') {
 		screen = 1;
+	} else if (item === 'Drukspil #2') {
+		screen = 2;
+		setupWheel();
 	} else if (item === 'Home') {
 		screen = 0;
 	}

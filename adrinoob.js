@@ -11,7 +11,7 @@
  * angle: her bir dilimin, bir kenarı ile diğer kenarı arasındaki iç açısı
  */
 
-let count = 10;
+let count = 6;
 let angle = 360 / count;
 ivme = 0;
 tsize = 20;
@@ -111,7 +111,7 @@ function setupWheel() {
 		 * We create our pies
 		 */
 
-		pies.push(new Pie(i, 'Drik ' + i + ' Slurke', 192, 192, 192));
+		pies.push(new Pie(i, 'Drik ' + i + ' slurke', 192, 192, 192));
 	}
 }
 //let f = [red, green, 31231];

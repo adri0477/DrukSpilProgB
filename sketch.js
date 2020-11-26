@@ -63,6 +63,9 @@ function draw() {
 		case 1:
 			displayScreen1();
 			break;
+		case 2:
+			displayScreen2();
+			break;
 		default:
 			break;
 	}
