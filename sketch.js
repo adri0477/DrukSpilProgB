@@ -21,7 +21,8 @@ let img, img1, img2;
 function preload() {
 	//Set img1 and img2 to their respective images
 	img1 = loadImage('./billeder/juletræ.png');
-	img2 = loadImage('./billeder/toast.png');
+	img2 = loadImage('./billeder/juletoast.png');
+	img3 = loadImage('./billeder/juletræ.png');
 }
 
 //Setup runs once before drawing the first frame and never again.
@@ -57,7 +58,7 @@ function draw() {
 	//If the screen is 0 then display two images
 	switch (screen) {
 		case 0:
-			image(img1, 150, 150);
+			image(img1, 150, 0);
 			image(img2, 850, 150);
 			break;
 		case 1:
