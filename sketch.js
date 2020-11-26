@@ -23,6 +23,7 @@ function preload() {
 	img1 = loadImage('./billeder/juletræ.png');
 	img2 = loadImage('./billeder/juletoast.png');
 	img3 = loadImage('./billeder/juletræ.png');
+	img4 = loadImage('./billeder/julemandskort.png');
 }
 
 //Setup runs once before drawing the first frame and never again.

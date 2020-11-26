@@ -26,7 +26,7 @@ pies = [];
 function onFinished(winner) {
 	console.log('winner -> ', winner);
 	fill(0);
-	rect(150, -280, 200, 50);
+	//rect(150, -280, 200, 50);
 	fill(255);
 	textSize(32);
 	text(winner.t, 150 + 10, -280 + 8, 200, 100);
