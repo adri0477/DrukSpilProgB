@@ -1,5 +1,6 @@
 function displayScreen1() {
 	udfordring.display();
+	//fix dit liv :)
 }
 
 function displayScreen2() {
