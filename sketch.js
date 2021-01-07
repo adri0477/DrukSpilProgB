@@ -44,10 +44,6 @@ function setup() {
 	//Run the function that initializes the selectBox/list
 	selInit();
 
-	//Create a new button called knap1 from the customButton class in classes.js
-	//knap1 = new customButton(100, 100, 100, 'Over under'); fix det her hvis i vil have det, det er inde på Drukspil 2. No good
-	udfordring = new customButton(200, 200, 100, 'ud');
-
 	//Log that setup is now done
 	console.log('Load succeeded');
 }
@@ -71,21 +67,10 @@ function draw() {
 		default:
 			break;
 	}
-
-	//Display knap1 with its own method
-	//knap1.display(); fix det her hvis i vil have det, det er inde på Drukspil 2. No good
 }
 
 //Runs every time the left mb is clicked
-function mouseClicked() {
-	//If knap1.checkPress returns true then run code
-	if (knap1.checkPress()) {
-		//CODE
-		alert('HOHO glædelig jul');
-	}
-	if (udfordring.checkPress()) {
-	}
-}
+function mouseClicked() {}
 
 //AAHC ❤
 //homoer

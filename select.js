@@ -1,3 +1,4 @@
+///<reference path="p5.d.ts" />
 //Set global var for the selectBox
 let sel;
 

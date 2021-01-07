@@ -1,7 +1,4 @@
-function displayScreen1() {
-	udfordring.display();
-	//fix dit liv :)
-}
+function displayScreen1() {}
 
 function displayScreen2() {
 	drawWheel();
