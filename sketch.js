@@ -29,8 +29,8 @@ function preload() {
 //Setup runs once before drawing the first frame and never again.
 function setup() {
 	//Set screen width and height to the window width and height minus five to eliminate scrollbars
-	w = windowWidth - 5;
-	h = windowHeight - 5;
+	w = windowWidth - 10;
+	h = windowHeight - 10;
 
 	//Create main canvas which the user sees
 	createCanvas(w, h);
@@ -43,6 +43,15 @@ function setup() {
 
 	//Run the function that initializes the selectBox/list
 	selInit();
+
+	//Buttons for over under
+	overKnap = new customButton(w / 2 - 55, h / 2, 100, 'Over');
+	underKnap = new customButton(w / 2 + 55, h / 2, 100, 'Under');
+
+	overUnderArray = [];
+
+	//Setup wheel
+	setupWheel();
 
 	//Log that setup is now done
 	console.log('Load succeeded');
@@ -70,7 +79,32 @@ function draw() {
 }
 
 //Runs every time the left mb is clicked
-function mouseClicked() {}
+function mouseClicked() {
+	if (overKnap.checkPress()) {
+		const t = overUnderArray[overUnderArray.length - 1];
+		overUnderArray.push(getRandomInt(7));
+		const nt = overUnderArray[overUnderArray.length - 1];
+		if (nt > t) {
+			alert('orale');
+		} else if (nt === t) {
+			alert('hmmm');
+		} else alert('gg');
+	}
+	if (underKnap.checkPress()) {
+		const t = overUnderArray[overUnderArray.length - 1];
+		overUnderArray.push(getRandomInt(7));
+		const nt = overUnderArray[overUnderArray.length - 1];
+		if (nt < t) {
+			alert('orale');
+		} else if (nt === t) {
+			alert('hmmm');
+		} else alert('gg');
+	}
+}
+
+function getRandomInt(max) {
+	return Math.floor(Math.random() * Math.floor(max));
+}
 
 //AAHC ❤
 //homoer

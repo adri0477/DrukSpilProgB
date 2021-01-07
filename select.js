@@ -21,10 +21,11 @@ function mySelectEvent() {
 	let item = sel.value();
 	console.log(item);
 	if (item === 'Drukspil #1') {
+		overUnderArray.push(getRandomInt(6));
+
 		screen = 1;
 	} else if (item === 'Drukspil #2') {
 		screen = 2;
-		setupWheel();
 	} else if (item === 'Home') {
 		screen = 0;
 	} else screen = 0; //Fallback to home screen if invalid option is selected

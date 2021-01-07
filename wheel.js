@@ -38,38 +38,7 @@ function onFinished(winner) {
  * TR: Çark dönmeye başladığında çalışır.
  */
 function onStarted(ivme) {
-	console.log('stared');
-	whosGonnaWin(ivme, 0.001, pies, angle);
-}
-/**
- *
- * @param {numeric} ivme
- * @param {numeric} speed
- * @param {Array} pies
- * @param {numeric} angle
- *
- * EN: For trying to guess which pie is going to win but it doesnt working.
- * TR: Hangi dilimin kazanacağını tahmin etmeye çalışıyor ama düzgün çalışmıyor.
- */
-function whosGonnaWin(ivme, speed, pies, angle) {
-	x = ivme;
-	console.log('Vinder', x);
-	var sum = 0;
-	do {
-		x -= speed;
-		sum += x;
-	} while (x > 0);
-
-	pies.forEach((pie) => {
-		order = pie.order + sum;
-		newAngle = order * angle;
-		//newAngle = newAngle % 360;
-		aralik = [newAngle, newAngle + angle];
-		if (aralik[0] % 360 <= 270 && aralik[1] % 360 >= 270) {
-			console.log('xT0ASTED', pie.orderPerm, aralik, x, order);
-			return pie;
-		}
-	});
+	console.log('Started');
 }
 
 /**
@@ -90,7 +59,10 @@ function spin() {
 }
 
 function doubleClicked() {
-	spin();
+	console.log('DCLICKED');
+	if (screen === 2) {
+		spin();
+	}
 }
 
 function setupWheel() {
