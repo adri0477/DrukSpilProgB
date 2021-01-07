@@ -27,5 +27,5 @@ function mySelectEvent() {
 		setupWheel();
 	} else if (item === 'Home') {
 		screen = 0;
-	}
+	} else screen = 0; //Fallback to home screen if invalid option is selected
 }
