@@ -31,8 +31,8 @@ function preload() {
 //Setup runs once before drawing the first frame and never again.
 function setup() {
 	//Set screen width and height to the window width and height minus five to eliminate scrollbars
-	w = windowWidth - 5;
-	h = windowHeight - 5;
+	w = windowWidth;
+	h = windowHeight;
 
 	//Create main canvas which the user sees
 	createCanvas(w, h);
