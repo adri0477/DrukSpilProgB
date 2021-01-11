@@ -8,11 +8,17 @@ class customButton {
 		this.img = img;
 	}
 	display() {
+		//Set fill color to white
+		fill(255);
+
 		//Display box that forms the button
 		rect(this.x, this.y, this.w, this.h);
 
 		//Display image in center of box if there is an image
 		this.img ? image(this.img, this.x, this.y, this.w, this.h) : false;
+
+		//Set fill to black so text can be seen
+		fill(0);
 
 		//Set textAlign to center, center and display the text for the button
 		textAlign(CENTER, CENTER);

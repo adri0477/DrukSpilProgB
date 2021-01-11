@@ -17,6 +17,8 @@ const backgroundColor = [211, 211, 211];
 //Initialize three vars
 let img, img1, img2;
 
+let overUnderNumbers = [];
+
 //Preload runs before setup and should only contain images fonts, and files to be loaded.
 function preload() {
 	//Set img1 and img2 to their respective images
@@ -48,8 +50,6 @@ function setup() {
 	overKnap = new customButton(w / 2 - 55, h / 2, 100, 'Over');
 	underKnap = new customButton(w / 2 + 55, h / 2, 100, 'Under');
 
-	overUnderArray = [];
-
 	//Setup wheel
 	setupWheel();
 
@@ -61,11 +61,9 @@ function draw() {
 	//Draw background.
 	background(...backgroundColor);
 
-	//If the screen is 0 then display two images
 	switch (screen) {
 		case 0:
-			image(img1, 150, 0);
-			image(img2, 850, 150);
+			displayHomeScreen();
 			break;
 		case 1:
 			displayScreen1();
@@ -74,6 +72,7 @@ function draw() {
 			displayScreen2();
 			break;
 		default:
+			displayHomeScreen();
 			break;
 	}
 }
@@ -81,24 +80,30 @@ function draw() {
 //Runs every time the left mb is clicked
 function mouseClicked() {
 	if (overKnap.checkPress()) {
-		const t = overUnderArray[overUnderArray.length - 1];
-		overUnderArray.push(getRandomInt(7));
-		const nt = overUnderArray[overUnderArray.length - 1];
-		if (nt > t) {
-			alert('orale');
-		} else if (nt === t) {
-			alert('hmmm');
-		} else alert('gg');
+		const prevNum = overUnderNumbers[overUnderNumbers.length - 1];
+		overUnderNumbers.push(getRandomInt(7));
+		const newNum = overUnderNumbers[overUnderNumbers.length - 1];
+
+		if (newNum > prevNum) {
+			//Guessed correct
+		} else if (newNum === prevNum) {
+			//New number is the same as the old
+		} else {
+			//Guessed wrong
+		}
 	}
 	if (underKnap.checkPress()) {
-		const t = overUnderArray[overUnderArray.length - 1];
-		overUnderArray.push(getRandomInt(7));
-		const nt = overUnderArray[overUnderArray.length - 1];
-		if (nt < t) {
-			alert('orale');
-		} else if (nt === t) {
-			alert('hmmm');
-		} else alert('gg');
+		const prevNum = overUnderNumbers[overUnderNumbers.length - 1];
+		overUnderNumbers.push(getRandomInt(7));
+		const newNum = overUnderNumbers[overUnderNumbers.length - 1];
+
+		if (newNum < prevNum) {
+			//Guessed correct
+		} else if (newNum === prevNum) {
+			//New number is the same as the old
+		} else {
+			//Guessed wrong
+		}
 	}
 }
 
