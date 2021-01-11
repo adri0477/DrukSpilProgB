@@ -66,7 +66,8 @@ function doubleClicked() {
 }
 
 function setupWheel() {
-	createCanvas(displayWidth, displayHeight);
+	//createCanvas(displayWidth, displayHeight);
+
 	/**
 	 * To rotate things by using degrees.
 	 */
