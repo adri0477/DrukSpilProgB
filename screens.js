@@ -6,6 +6,7 @@ function displayScreen1() {
 		w / 2 - 20,
 		h / 2 - 100
 	);
+	text('Slurke: ' + 1, w / 2, h / 2 - 50);
 	overKnap.display();
 	underKnap.display();
 }

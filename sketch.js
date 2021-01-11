@@ -55,6 +55,24 @@ function setup() {
 
 	//Log that setup is now done
 	console.log('Load succeeded');
+
+	switch (window.location.search.substr(1)) {
+		case 'p=0':
+			sel.selected('Home');
+			screen = 0;
+			break;
+		case 'p=1':
+			sel.selected('Drukspil #1');
+			screen = 1;
+			break;
+		case 'p=2':
+			sel.selected('Drukspil #2');
+			screen = 2;
+			break;
+		default:
+			window.location.href = window.location.href + '?p=0';
+			break;
+	}
 }
 
 function draw() {
