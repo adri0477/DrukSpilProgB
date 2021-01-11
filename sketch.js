@@ -62,6 +62,7 @@ function setup() {
 			screen = 0;
 			break;
 		case 'p=1':
+			initGame1();
 			sel.selected('Drukspil #1');
 			screen = 1;
 			break;
@@ -104,10 +105,13 @@ function mouseClicked() {
 
 		if (newNum > prevNum) {
 			//Guessed correct
+			overUnderSlurke += 1;
 		} else if (newNum === prevNum) {
 			//New number is the same as the old
 		} else {
 			//Guessed wrong
+			alert('Drik ' + overUnderSlurke + ' slurke!');
+			overUnderSlurke = 0;
 		}
 	}
 	if (underKnap.checkPress()) {
@@ -117,10 +121,13 @@ function mouseClicked() {
 
 		if (newNum < prevNum) {
 			//Guessed correct
+			overUnderSlurke += 1;
 		} else if (newNum === prevNum) {
 			//New number is the same as the old
 		} else {
 			//Guessed wrong
+			alert('Drik ' + overUnderSlurke + ' slurke!');
+			overUnderSlurke = 0;
 		}
 	}
 }

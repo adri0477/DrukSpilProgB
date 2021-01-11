@@ -1,3 +1,5 @@
+let overUnderSlurke = 0;
+
 function displayScreen1() {
 	//console.log(i);
 	textSize(25);
@@ -6,7 +8,7 @@ function displayScreen1() {
 		w / 2 - 20,
 		h / 2 - 100
 	);
-	text('Slurke: ' + 1, w / 2, h / 2 - 50);
+	text('Slurke: ' + overUnderSlurke, w / 2, h / 2 - 50);
 	overKnap.display();
 	underKnap.display();
 }
@@ -23,4 +25,10 @@ function displayHomeScreen() {
 	background(...backgroundColor);
 	image(img1, 150, 0);
 	image(img2, 850, 150);
+}
+
+function initGame1() {
+	window.history.pushState('1', 'Drukspil 1', '/?p=1');
+	overUnderNumbers.push(getRandomInt(6));
+	screen = 1;
 }

@@ -23,9 +23,7 @@ function onSelectChange() {
 
 	switch (item) {
 		case 'Drukspil #1':
-			window.history.pushState('1', 'Drukspil 1', '/?p=1');
-			overUnderNumbers.push(getRandomInt(6));
-			screen = 1;
+			initGame1();
 			break;
 		case 'Drukspil #2':
 			window.history.pushState('2', 'Drukspil 2', '/?p=2');
