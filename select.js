@@ -1,9 +1,9 @@
 ///<reference path="p5.d.ts" />
-//Set global var for the selectBox
+
 let sel;
 
 function selInit() {
-	//textAlign(CENTER);
+
 	sel = createSelect();
 	sel.size(90, 40);
 
